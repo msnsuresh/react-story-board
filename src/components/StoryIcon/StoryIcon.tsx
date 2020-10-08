@@ -6,23 +6,33 @@ import {
   getStoryType,
   StoryTypes,
 } from "../Story.utils";
-import { StoryIconWrapper } from "./StoryIcon.styled";
+import {
+  GradientBorder,
+  ImageStoryWrapper,
+  TextStoryWrapper,
+} from "./StoryIcon.styled";
 
 export interface StoryIconProps {
+  isViewed: boolean;
   story: string | Story;
+  onClick: () => void;
 }
 
 const StoryIcon: React.FC<StoryIconProps> = (props: StoryIconProps) => {
   const storyType = getStoryType(props.story);
   return (
-    <StoryIconWrapper {...getStoryColor(props.story)}>
+    <GradientBorder isViewed={props.isViewed} onClick={props.onClick}>
       {storyType === StoryTypes.TEXT && (
-        <span>{(props.story as Story).text}</span>
+        <TextStoryWrapper {...getStoryColor(props.story)}>
+          {(props.story as Story).text}
+        </TextStoryWrapper>
       )}
       {storyType === StoryTypes.IMAGE && (
-        <img src={getImageSource(props.story)} alt={""} />
+        <ImageStoryWrapper>
+          <img src={getImageSource(props.story)} alt={""} />
+        </ImageStoryWrapper>
       )}
-    </StoryIconWrapper>
+    </GradientBorder>
   );
 };
 
