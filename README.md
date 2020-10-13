@@ -1,3 +1,16 @@
+# A simplified Recipe Shopping with Payment gateway
+
+> Started with listing with the available recipe's from the API
+> Linked to API, Design the product portfolio, connected to store
+
+## Working application
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/cf72c4d0-1912-48c3-b72e-1bf5ead858b6/deploy-status)](https://app.netlify.com/sites/jovial-kirch-5fac53/deploys)
+
+The application can be found in [netlify-link]
+
+![][demo-gif]
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
@@ -42,3 +55,6 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
+
+[netlify-link]: https://jovial-kirch-5fac53.netlify.app/
+[demo-gif]: recording/react-story-board.gif
