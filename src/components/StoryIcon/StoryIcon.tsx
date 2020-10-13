@@ -23,7 +23,7 @@ const StoryIcon: React.FC<StoryIconProps> = (props: StoryIconProps) => {
   return (
     <GradientBorder isViewed={props.isViewed} onClick={props.onClick}>
       {storyType === StoryTypes.TEXT && (
-        <TextStoryWrapper {...getStoryColor(props.story)}>
+        <TextStoryWrapper {...getStoryColor(props.story as Story)}>
           {(props.story as Story).text}
         </TextStoryWrapper>
       )}
