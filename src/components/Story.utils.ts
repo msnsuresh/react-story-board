@@ -4,11 +4,7 @@ export enum StoryTypes {
   "TEXT" = "TEXT",
 }
 
-export const getStoryColor = (story: string | Story) => {
-  if (getStoryType(story) !== StoryTypes.TEXT) {
-    return undefined;
-  }
-
+export const getStoryColor = (story: Story) => {
   return {
     background: (story as Story).background || "#363636",
     color: (story as Story).color || "#fff",
